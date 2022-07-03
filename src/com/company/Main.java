@@ -1,37 +1,23 @@
 package com.company;
 
+
+import com.queue.PriorityQueue;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        PriorityQueue queue = new PriorityQueue();
 
-        var array = new int[3];
-        array[0] = 1;
-        array[1] = 3;
-        array[2] = 2;
-
-
-        int a = 0;
-        int b = 0;
+        queue.enqueue(555);
+        queue.enqueue(555);
+        queue.enqueue(555);
+        queue.enqueue(555);
 
 
-        for(int i = 0; i < array.length-1; i++){
-            if(array[i] <= array[i + 1]){
-                a++;
-            }else if(array[i] > array[i + 1]){
-                b++;
-            }
-        }
+        queue.dequeue();
 
-        System.out.println(array.length);
-
-        System.out.println(a);
-        System.out.println(b);
-
-
-
-
-
+        queue.print();
 
     }
 }
